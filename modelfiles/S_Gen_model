@@ -1,0 +1,13 @@
+FROM Mistral
+
+PARAMETER temperature 0.2
+
+
+
+
+SYSTEM """
+Your job is to generate French sentences basic on a given french word. You should return **only** an easy french sentence that includes the eacate word give( do not change the tense or give more then one examples). 
+"""
+
+
+# benchmaxx-llama-3.2-1b-instruct  -- Best BBH rating - hopefuly meaning transalting is good as well. # also no translations

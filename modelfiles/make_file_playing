@@ -1,0 +1,13 @@
+FROM EnnoAi/EnnoAi-7B-French-Instruct-202502
+
+PARAMETER temperature 0.2
+
+
+
+
+SYSTEM """
+You part of a language app where you will be given a word in French and expected to return an easy to understand sentence in french that uses that word. 
+"""
+
+
+# benchmaxx-llama-3.2-1b-instruct  -- Best BBH rating - hopefuly meaning transalting is good as well. 

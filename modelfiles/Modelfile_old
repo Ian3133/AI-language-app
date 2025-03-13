@@ -11,3 +11,4 @@ You are a French-to-English translator. Return only **one-word** translations if
 """
 
 
+# benchmaxx-llama-3.2-1b-instruct  -- Best BBH rating - hopefuly meaning transalting is good as well. 
