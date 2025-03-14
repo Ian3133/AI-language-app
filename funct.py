@@ -78,21 +78,20 @@ def create_pronunciation(sentence):
     language = "fr"  # set to french
     # Generate audio with gTTS
     tts = gTTS(text=sentence, lang=language, slow=False)
-    filename = "Pronunciations/"+sentence+".mp3"
+    filename = "Pronunciations/"+(sentence)+".mp3"
     tts.save(filename)
 
 
 
 def play_mp3(sentence):
-    mp3_path = f"Pronunciations\ {sentence}.mp3"
+    mp3_path = f"Pronunciations\{sentence}.mp3"
 
     if not os.path.exists(mp3_path):  
        print("MP3 file not found.") 
        return
-
     
     pygame.mixer.init()
-    pygame.mixer.music.load(f"Pronunciations\ {sentence}.mp3")
+    pygame.mixer.music.load(f"Pronunciations\{sentence}.mp3")
     pygame.mixer.music.play()
     
     print(f"Playing: {sentence}")
@@ -102,6 +101,17 @@ def play_mp3(sentence):
         continue
     else:
         pygame.mixer.quit()  # closes it so less of a problem for other functions
+
+
+
+def speak_new_sentence(sentence):
+    create_pronunciation(sentence)
+    play_mp3(sentence)
+    #next to remove it from the file
+
+
+
+
 
 # # Example usage:
 # if __name__ == "__main__":
