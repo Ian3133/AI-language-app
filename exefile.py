@@ -1,13 +1,22 @@
-from funct import *
+
+
+'''This File is mostly a Copy and Paste of Main.ipynb it is condence into a file py file so an exe file can be made no new code is writen here'''
+
+
+
+
+
+
+from funct import * # imports my blackbox
 
 from langchain_community.utilities import SQLDatabase
 
+# ollama is the AI we used
 import ollama
 
 client = ollama.Client()
 
 
-# 🔹 Step 1: Connect to SQLite Database
 db = SQLDatabase.from_uri("sqlite:///Word_DB.sqlite")
 
 # 🔹 Step 2: Run the Query to Get Words
